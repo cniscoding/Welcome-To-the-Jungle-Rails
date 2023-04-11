@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
 
   describe 'Validations' do
     it 'user is valid if all field is input' do
-      @user = User.new(name: 'Jack', email: 'this@email.com', password: 'letmein', password_confirmation: 'letmein')
+      @user = User.create(name: 'Jack', email: 'this@email.com', password: 'letmein', password_confirmation: 'letmein')
       expect(@user).to be_valid
     end
     
@@ -29,10 +29,14 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include("Name can't be blank")
     end
 
-
     it 'shows an error when email is not input' do
       @user = User.create(name: 'Jack', email: nil,  password: 'letmein', password_confirmation: 'letmein')
       expect(@user.errors.full_messages).to include("Email can't be blank")
+    end
+
+    it 'should fail if password is not a minimum length of 6 characters' do
+      @user = User.create(name: 'Jack', email: 'this@email.com',  password: 'fail', password_confirmation: 'fail')
+      expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
     end
 
 
