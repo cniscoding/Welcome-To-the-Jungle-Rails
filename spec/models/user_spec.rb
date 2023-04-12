@@ -39,7 +39,22 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
     end
   end
+
   describe '.authenticate_with_credentials' do
-    # examples for this class method here
+    it 'it log in with correct credentials' do
+      @user = User.create(name: 'Jack', email: 'this@email.com', password: "letmein", password_confirmation: "letmein")
+      expect(User.authenticate_with_credentials('this@email.com', "letmein")).to_not eq(nil)
+    end
+
+    it 'few spaces before and/or after their email address should authenticate successfully' do
+      @user = User.create(name: 'Jack', email: 'this@email.com', password: 'letmein', password_confirmation: 'letmein')
+      expect(User.authenticate_with_credentials('   this@email.com ', 'letmein')).to_not eq(nil)
+    end
+
+    it 'should login with case mismatch' do
+      @user = User.create(name: 'Jack', email: 'tHIs@email.com', password: 'letmein', password_confirmation: 'letmein')
+      expect(User.authenticate_with_credentials('this@email.com ', 'letmein')).to_not eq(nil)
+    end
+
   end
 end
