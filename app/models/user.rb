@@ -7,15 +7,17 @@ class User < ApplicationRecord
   before_create :format_email
 
   def self.authenticate_with_credentials(email, password)
-    email = email.downcase.strip
-    user = User.find_by_email(email)
+    @email = email.downcase.strip
+    @user = User.find_by_email(@email)
 
-    if user.authenticate(password)
-      user
+    if @user && @user.authenticate(password)
+      @user
     else
       nil
     end
   end
+
+  private 
 
   def format_email
     self.email = email.strip.downcase
