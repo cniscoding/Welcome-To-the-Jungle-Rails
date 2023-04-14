@@ -5,16 +5,16 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 
 ## ScreenShots
 Landing/Index Page
-![Landing/Index Page](https://github.com/cniscoding/-scheduler/blob/master/docs/pic1_layout.png)
+![Landing/Index Page](https://github.com/cniscoding/jungle-rails/blob/master/docs/00_index_page.png)
 
 Product selection on Index
-![Product selection on Index](https://github.com/cniscoding/-scheduler/blob/master/docs/pic1_layout.png)
+![Product selection on Index](https://github.com/cniscoding/jungle-rails/blob/master/docs/01_index_page_with_products.png)
 
 Admin Dashboard
-![Admin Dashboard](https://github.com/cniscoding/-scheduler/blob/master/docs/pic2_addNewAppt.png)
+![Admin Dashboard](https://github.com/cniscoding/jungle-rails/blob/master/docs/02_admin_dashboard.png)
 
 Checkout Screen with Stripe
-![Checkout Screen with Stripe](https://github.com/cniscoding/-scheduler/blob/master/docs/pic3_delete.png)
+![Checkout Screen with Stripe](https://github.com/cniscoding/jungle-rails/blob/master/docs/03_checkout_with_stripe.png)
 
 ## Setup
 
