@@ -2,6 +2,20 @@
 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
 
+
+## ScreenShots
+Landing/Index Page
+![Landing/Index Page](https://github.com/cniscoding/-scheduler/blob/master/docs/pic1_layout.png)
+
+Product selection on Index
+![Product selection on Index](https://github.com/cniscoding/-scheduler/blob/master/docs/pic1_layout.png)
+
+Admin Dashboard
+![Admin Dashboard](https://github.com/cniscoding/-scheduler/blob/master/docs/pic2_addNewAppt.png)
+
+Checkout Screen with Stripe
+![Checkout Screen with Stripe](https://github.com/cniscoding/-scheduler/blob/master/docs/pic3_delete.png)
+
 ## Setup
 
 1. Run `bundle install` to install dependencies
